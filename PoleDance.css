@@ -3,19 +3,17 @@
     --offset: 20px;
     --primary-color: #E89B2B;
 }
-
-/*
-font-family: 'Roboto Mono', monospace; - разделы навигации
-font-family: 'Vazirmatn', sans-serif;  - номера телефонов
-font-family: 'Yanone Kaffeesatz', sans-serif; - общий текст
-*/
-
 .text{
     font-family: 'Yanone Kaffeesatz';
     color: #FFFFFF;
 }
 button{
     cursor: pointer;
+}
+
+.content{
+    max-width: 1024px;
+    margin: auto;
 }
 
 .header-blok{
@@ -158,72 +156,118 @@ a{
 .background-dark{
     background-color: #202021;
 }
+
+.about-poledance{
+    display: flex;
+    flex-grow: row wrap;
+    padding-top: 120px;
+}
+.about-poledance__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-right: 20px;
+}
+
 .big-h{
     font-weight: 600;
     font-size: 76px;
     line-height: 76px;
     color: rgba(255, 255, 255, 0.14);
     padding-left: 95px;
-    padding-top: 120px;
 }
 .small-h{
     font-weight: 600;
     font-size: 34px;
     line-height: 34px;
     padding-left: 120px;
-    margin-top: -35px;
-    padding-bottom: 105px;
+    margin-top: -55px;
+    margin-bottom: 50px;
+}
+.poledance-p{
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 20px;
+    text-align: justify;
+}
+.poledance-p__fat{
+    font-weight: 600;
+    font-size: 26px;
+}
+.left-li{   
+    margin-left: 20px;
+}
+ul{
+    list-style-type: none;
 }
 
-.row-direction{
+
+.row-schedule{
     display: flex;
     flex-flow: row wrap;
     margin: 0 calc(0px - var(--offset)/2);
+    margin-top: 70px;
+    margin-bottom: 50px;
 }
-.direction-item{
+.schedule-item{
     box-sizing: border-box;
-
-    width: calc(100%/ 3 - var(--offset));
+    width: calc(100%/ 2 - var(--offset));
     margin: calc(var(--offset)/2);
-
-    height: 400px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    height: 40px;
+    border: 1px solid var(--primary-color);
 
     display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-.dancemix-background{background-image: url(img/DanceMix.png);}
-.forchildren-background{background-image: url(img/ForChildren.png);}
-.caribbeanmix-background{background-image: url(img/CaribbeanMix.png);}
-.poledance-background{background-image: url(img/PoleDance.png);}
-.skyjumping-background{background-image: url(img/SkyDumping.png);}
-.hiphop-background{background-image: url(img/HipHop.png);}
-
-.direction-name{
-    width: max-content;
-    height: 30px;
-    background-color: #202021;
-    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     align-items: flex-end;
 }
-.direction-name-p{
-    font-weight: 600;
-    font-size: 26px;   
-    padding-left: 10px;
-    padding-right: 18px;
-}
-.direction-knopki{
+.schedule-rigth-blok{
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.schedule-day-time{
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 32px;
+    padding: 0px 20px;
+}
+.time{
+    padding-top: 4px;
+}
+.schedule-button{
+    width: 140px;
+    height: 38px;
+    font-weight: 400;
+    font-size: 32px;
+    background: rgba(0, 0, 0, 0.52);
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.schedule-button:hover{
+    background-color: #a7701e;
+    border-color: #a7701e;
+}
+.schedule-button:active{
+    background-color: #774c0b;
+    border-color: #774c0b;
+}
+
+.subscription{
+    background-image: url(img/subscription-background-poledance.png);
+    height: 180px;
+    border-bottom: 4px solid var(--primary-color);
+    background-position: right;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-    height: 98px;
-    border-top: 4px solid #202021;
-    background: linear-gradient(0deg, rgba(32, 32, 33, 0.79) 0%, rgba(32, 32, 33, 0) 231.77%);
+    padding-left: 90px;
+}
+.subscription-p{
+    font-weight: 600;
+    font-size: 42px;    
 }
 .button-write{
     width: 110px;
@@ -243,99 +287,6 @@ a{
     background-color: #774c0b;
     border-color: #774c0b;
 }
-.button-detalied{
-    width: 110px;
-    padding: 5px 8px 2px 8px;
-    font-weight: 600;
-    font-size: 24px;
-    background: rgba(0, 0, 0, 0.52);
-    border: 1px solid #FFFFFF;
-    background-color: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.button-detalied:hover{
-    background: linear-gradient(0deg, rgba(38, 37, 37, 0.79) 0%, rgba(65, 65, 66, 0) 231.77%);
-    border-color: linear-gradient(0deg, rgba(38, 37, 37, 0.79) 0%, rgba(65, 65, 66, 0) 231.77%);
-}
-.button-detalied:active{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.79) 0%, rgba(31, 31, 31, 0) 231.77%);
-    border-color: linear-gradient(0deg,  rgba(0, 0, 0, 0.79) 0%, rgba(31, 31, 31, 0) 231.77%);
-}
-
-.main-background{
-    background-image: url(img/main-background.png);
-    width: 100%;
-    height: max-content;
-}
-.row-studio{
-    display: flex;
-    flex-flow: row nowrap;
-    padding: 110px 0;
-    margin: 0 calc(0px - var(--offset)/2);
-}
-.studio-item{
-    width: calc(100%/ 3 - var(--offset));
-    height: 250px;
-    margin: calc(var(--offset)/2);
-    background: rgba(16, 16, 16, 0.86);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-.studio-h{
-    font-weight: 600;
-    font-size: 28px;
-    padding-top: 12px;
-}
-.studio-work-schedule{
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 28px;
-    color: #C88930;
-    padding-top: 12px;
-}
-.studio-work-schedule__light{
-    font-weight: 300;
-}
-.studio-icon-text{
-    display: flex;
-    flex-flow: row nowrap;
-    margin-bottom: 12px;
-}
-.studio-icon{
-    width: 22px;
-    padding-right: 10px;
-}
-.studio-phone{
-    font-family: 'Vazirmatn'; 
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    color: #FFFFFF;
-}
-.studio-address{
-    font-weight: 600;
-    font-size: 22px;
-}
-
-.subscription{
-    background-image: url(img/subscription-background2.png);
-    height: 180px;
-    border-bottom: 4px solid var(--primary-color);
-    background-position: right;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-left: 90px;
-}
-.subscription-p{
-    font-weight: 600;
-    font-size: 42px;    
-}
 .button-write-buy{
     padding: 7px 10px 4px 10px;
     font-weight: 600;
@@ -345,77 +296,31 @@ a{
     width: 160px;
     font-size: 26px;
 }
-.subscription-item{
-    width: calc(100%/ 3 - var(--offset));
-    margin: calc(var(--offset)/2);
-}
-.subscr-foto{
-    width: 100%;
-    height: 240px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-.subscr-foto_mini{
-    background-image: url(img/backgroundMini.png);
-}
-.subscr-foto_stand{
-    background-image: url(img/backgroundStand.png);
-}
-.subscr-foto_nolimit{
-    background-image: url(img/backgroundNolimit.png);
-}
-.subscr-content{
-    width: 94%;
-    height: 94%;
-    margin: 7px auto;
-    background-color: rgba(0, 0, 0, 0.52);
-    border: 1px solid var(--primary-color);
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+.other-right{
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 0 15px;
+    justify-content: end;
+    padding-bottom: 80px;
 }
-.subscr-content__one{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.subscr-content__h{
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 30px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    text-align: center;
-    padding-bottom: 15px;
-    text-decoration: underline solid #E89B2B;
-}
-.subscr-content__p{
-    font-weight: 500;
-    text-align: justify;
-    font-size: 18px;
-    line-height: 18px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.subscr-content__two{
+.other{
+    width: max-content;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #FFFFFF;
+    padding: 5px;
+    margin-top: 50px;
 }
-.subscr-two__p{
-    font-weight: 700;
+.other-p{
     font-size: 28px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 300;
 }
-.price{
-    font-weight: 700;
-    font-size: 34px;
-    color: var(--primary-color);
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.vector-blok{
+    padding: 0 10px;
+}
+.vector-two{
+    width: 9px;
+    height: 15px;
 }
 
 
@@ -502,37 +407,37 @@ a{
         height: 585px;
         margin-left: 40px;}
 
+    .about-poledance__text{
+        margin-right: 10px;
+        margin-left: 15px;}
+    .about-poledance__foto{
+        margin-right: 15px;}
+    .big-h{
+        font-size: 56px;
+        line-height: 56px;
+        padding-left: 45px;
+        padding-top: 0px; }
+    .small-h{
+        font-size: 24px;
+        line-height: 24px;
+        padding-left: 70px;
+        margin-top: -25px;
+        margin-bottom: 10px;
+        padding-bottom: 0px;}
 
-    .row-direction{
-        margin: auto;
-        align-items: center;
-        justify-content: center;}
-    .direction-item{
-        width: 350px;} /*calc(100%/ 2 - var(--offset));}*/
-    .direction-knopki{
-        width: 350px;} /*calc(100%/ 1 - var(--offset));}*/
-
-    .row-studio{
-        flex-flow: row wrap;
-        padding: 10px 0;
-        margin: 0 auto;
-        align-items: center;
-        justify-content: center;}
-    .studio-item{
-        height: 240px;}
-    .studio-icon{
-        width: 18px;}
-
+    .row-schedule{
+        margin: 50px 5px;}
 
     .subscription{
-        margin: auto 15px;
-    }
+        margin: auto 15px;}
     .subscription-item{
         width: calc(100%/ 2 - var(--offset));}
 
+    .other-right{
+        margin: auto 15px;}
+
     .our-networks{
-        margin-right: 15px;
-    }
+        margin-right: 15px;}
     .row-contacts{ 
         margin: 0px;}
     .footer-phone{
@@ -560,28 +465,9 @@ a{
         padding-right: 30px;}
     .promotion-h1{
         font-size: 42px;}
-        
-    .row-direction{
-        justify-content: space-evenly;
-    }
-    .direction-item{
-        width: 300px;}
-    .direction-knopki{
-        width: 300px;}
 
-    .row-studio{
-        margin: 0 calc(var(--offset)/2);}
-    .studio-item{
-        width: calc(100%/ 2 - var(--offset));
-        box-sizing: border-box;}
-    .studio-h{
-        font-size: 26px;
-        line-height: 26px;}
-    .studio-work-schedule{
-        font-size: 24px;
-        line-height: 24px;}
-    .studio-address, .studio-phone{
-        font-size: 20px; }
+    .schedule-item{
+        width: calc(100%/ 1 - var(--offset));}
 
     .subscr-content__h{
         padding-bottom: 8px;}
@@ -596,18 +482,23 @@ a{
 
 
 @media(max-width:692px){
+    .about-poledance__foto{
+        display: flex;
+        align-items: center;}
+    .poledance-foto{
+        width: 280px;}
+    .poledance-p{
+        font-size: 20px;
+        line-height: 18px; }
+    .poledance-p__fat{
+        font-size: 24px;}
+
     .footer-background{
         width: 100%;
         height: max-content;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;}
-    .row-contacts{
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 20px;}
-    .contacts-item{
-        padding-bottom: 20px;}
 }
 
 @media(max-width:600px){
@@ -631,27 +522,23 @@ a{
     .promotion-newlyweds-a{
         font-size: 16px;}
 
-    .big-h{
-        font-size: 56px;
-        line-height: 56px;
-        padding-left: 45px;
-        padding-top: 80px;
-        }
-    .small-h{
-        font-size: 24px;
-        line-height: 24px;
-        padding-left: 70px;
-        margin-top: -25px;
-        padding-bottom: 65px;}
-
-    .main-background{
-        background-image: url(img/main-background-600px.png);
-    }
-    .row-studio{
-        margin: 0 calc(var(--offset)/2);}
-    .studio-item{
-        height: 220px;
-        width: calc(100%/ 1 - var(--offset));}
+    .about-poledance{
+        flex-direction: column;
+        padding-top: 50px;}
+    .about-poledance__foto{
+        justify-content: center;
+        margin-top: 20px;}
+    .poledance-foto{
+        width: 280px;}
+    .about-poledance__text{
+        margin-right: 15px;}
+    
+    .schedule-day-time{
+        font-size: 28px;
+        padding-left: 10px;
+        padding-right: 10px;}
+    .schedule-button{
+        font-size: 28px; }
 
     .subscription{
         padding-left: 30px;}
@@ -670,6 +557,12 @@ a{
         padding: 7px 7px 4px 7px;
         font-size: 22px;}
 
+    .other{
+        flex-wrap: wrap;
+        justify-content: center;}
+    .other-p{
+        font-size: 24px;}
+
     .footer-nav{
         align-items: center;}
     .footer-a{
@@ -684,6 +577,17 @@ a{
         font-size: 16px;
         padding-left: 10px;
         padding-right: 15px;}
+}
+
+@media(max-width:400px){
+    .schedule-day-time{
+        font-size: 24px;
+        padding-left: 5px;
+        padding-right: 5px;}
+    .schedule-button{
+        font-size: 24px; }
+    .schedule-button{
+        width: 100px;}
 }
 
 @media(max-width:360px){
